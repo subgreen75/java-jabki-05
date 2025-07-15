@@ -27,8 +27,10 @@ public class Order {
      * @param item товар
      */
     public void addItemToOrder(OrderItem item) {
-        this.items.add(item); // добавление товара в список товаров в заказе
-        this.totalPrice += item.getPrice();  // цену товара добавлем к сумме по заказу
+        if (item.checkOrderItem(item.getItemName(), item.getPrice())) {
+            this.items.add(item); // добавление товара в список товаров в заказе
+            this.totalPrice += item.getPrice();  // цену товара добавлем к сумме по заказу
+        }
     }
 
     public UUID getOrderID() {

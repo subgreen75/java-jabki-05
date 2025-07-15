@@ -25,7 +25,7 @@ public class Television {
         return this.volume;
     }
 
-    // выводит на дисплей информацию о владельце и сумме в кошельке
+    // выводит на дисплей информацию о канале и громкости
     public void displayTVInfo() {
         System.out.printf("Канал : %s, Громкость %s\n", this.currentChannel, this.volume);
     }

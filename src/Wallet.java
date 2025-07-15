@@ -8,6 +8,11 @@ public class Wallet {
     private String owner;
     private double money;
 
+    public Wallet(String owner, double money) {
+        this.owner = owner;
+        this.money = money;
+    }
+
     public void setOwner(String owner) {
         this.owner = owner;
     }

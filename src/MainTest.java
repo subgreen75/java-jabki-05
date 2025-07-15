@@ -6,14 +6,8 @@ class MainTest {
     @Test
     void walletTest() {
         System.out.println("***   Тестирование класса wallet   ***");
-        Wallet wallet = new Wallet();
+        Wallet wallet = new Wallet("Паша", 50000);
         System.out.println("Создали объект");
-        wallet.displayWalletInfo();
-        System.out.println("set owner Паша");
-        wallet.setOwner("Паша");
-        wallet.displayWalletInfo();
-        System.out.println("set money 50000");
-        wallet.setMoney(50000);
         wallet.displayWalletInfo();
         System.out.println("set negative money");
         wallet.setMoney(-100);
@@ -72,9 +66,15 @@ class MainTest {
         OrderItem item1 = new OrderItem("Молоко", 100);
         OrderItem item2 = new OrderItem("Хлеб", 25);
         OrderItem item3 = new OrderItem("Конфеты", 340);
+        OrderItem item4 = new OrderItem("Сыр", -1);
+        OrderItem item5 = new OrderItem("", 20);
         order.addItemToOrder(item1);
         order.addItemToOrder(item2);
         order.addItemToOrder(item3);
+        order.addItemToOrder(item4);
+        order.addItemToOrder(item5);
+
+
         order.displayOrderInfo();
     }
 }
