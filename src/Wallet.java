@@ -16,7 +16,7 @@ public class Wallet {
         if (money < 0) {
             System.out.println("Сумма в кошельке не может быть отрицательной");
         } else {
-            this.money += money;
+            this.money = money;
         }
     }
 
