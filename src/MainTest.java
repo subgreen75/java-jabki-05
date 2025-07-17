@@ -18,8 +18,8 @@ class MainTest {
         System.out.printf("Владелец: %s\n", wallet.getOwner());
         System.out.println("get money");
         System.out.printf("Сумма: %s\n", wallet.getMoney());
-        System.out.println("spend 1000");
-        wallet.spend(1000);
+        System.out.println("spend 10001");
+        wallet.spend(10001);
         wallet.displayWalletInfo();
     }
 
@@ -56,6 +56,13 @@ class MainTest {
         System.out.println("Переключим канал");
         tv2.nextChannel();
         tv2.displayTVInfo();
+        tv2.setCurrentChannel(99);
+        tv2.displayTVInfo();
+        tv2.nextChannel();
+        tv2.displayTVInfo();
+        tv2.nextChannel();
+        tv2.displayTVInfo();
+
     }
 
     @Test

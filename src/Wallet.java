@@ -47,7 +47,11 @@ public class Wallet {
         if (amount < 0) {
             System.out.println("Сумма затрат не может быть отрицательной");
         } else {
-            this.money -= amount;
+            if (this.money < amount) {
+                System.out.println("Потраченная сумма превышает остаток в кошельке. Списать не могу");
+            } else {
+                this.money -= amount;
+            }
         }
     }
 }

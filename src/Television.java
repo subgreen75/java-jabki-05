@@ -10,8 +10,8 @@ public class Television {
     private int currentChannel; // текущий канал
     private int volume; // громкость
 
-    Television(int channel, int volume) {
-        if (isBetween(channel, 0, 100) && isBetween(volume, 1, 50)) {
+    public Television(int channel, int volume) {
+        if (isBetween(channel, 1, 50) && isBetween(volume, 0, 100)) {
             this.currentChannel = channel;
             this.volume = volume;
         }
@@ -25,14 +25,20 @@ public class Television {
         return this.volume;
     }
 
+    public void setCurrentChannel(int channel) {
+        this.currentChannel = channel;
+    }
+
     // выводит на дисплей информацию о канале и громкости
     public void displayTVInfo() {
         System.out.printf("Канал : %s, Громкость %s\n", this.currentChannel, this.volume);
     }
 
     public void nextChannel() {
-        if (this.currentChannel <= 100) {
-            this.currentChannel += 1;
+        if (this.currentChannel == 100) {
+            this.currentChannel = 1;
+        } else {
+            this.currentChannel++;
         }
     }
 

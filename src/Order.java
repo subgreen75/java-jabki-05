@@ -14,12 +14,11 @@ import java.util.UUID;
  */
 public class Order {
     private final UUID orderID; // Идентификатор заказа (значение = глобальному идентификатору)
-    private List<OrderItem> items; // список товаров
+    private List<OrderItem> items = new ArrayList<OrderItem>(); // список товаров
     private double totalPrice; // Сумма по заказу
 
     public Order() {
         this.orderID = UUID.randomUUID();
-        this.items = new ArrayList<OrderItem>(); // при инициализации заказа создаем пустой список товаров
     }
 
     /**
