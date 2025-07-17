@@ -35,7 +35,7 @@ public class Television {
     }
 
     public void nextChannel() {
-        if (this.currentChannel == 100) {
+        if (this.currentChannel == 50) {
             this.currentChannel = 1;
         } else {
             this.currentChannel++;
