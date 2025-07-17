@@ -7,7 +7,7 @@ public class Game {
     private int secretNumber; // загаданное число
 
     public Game() {
-        secretNumber = (int)(Math.random() * 100); //Math.random() RANDOM.nextInt(1, 100);
+        secretNumber = (int)(Math.random() * 100);
     }
 
     /**
